@@ -1,5 +1,5 @@
-from physical import Card
 from typing import List
+from physical import Card
 
 class Player:
     """

@@ -1,23 +1,23 @@
-from game import Game
+from abc import ABC, abstractmethod
 from player import Player
 
-class CLIInterface():
+class UserInterface(ABC):
     """
-    Command-line interface implementation for the Dragons Hoard game.
+    Abstract base class for user interfaces.
     """
 
-    def display_game_state(self, game: Game):
-        # TODO: Implement CLI game state display
+    @abstractmethod
+    def display_game_state(self, game):
         pass
 
+    @abstractmethod
     def get_player_action(self, player: Player) -> str:
-        # TODO: Implement CLI player action input
         pass
 
+    @abstractmethod
     def display_challenge_result(self, challenger: Player, opponent: Player, winner: Player):
-        # TODO: Implement CLI challenge result display
         pass
 
+    @abstractmethod
     def display_winner(self, winner: Player):
-        # TODO: Implement CLI winner display
         pass
